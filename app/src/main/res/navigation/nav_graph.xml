@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/foodListFragment">
+
+    <fragment
+        android:id="@+id/foodListFragment"
+        android:name="com.codewithhiren.foodorderapplatest.ui.foodList.FoodListFragment"
+        android:label="Food List"
+        tools:layout="@layout/fragment_food_list" >
+        <action
+            android:id="@+id/action_foodListFragment_to_makeOrderFragment"
+            app:destination="@id/makeOrderFragment" >
+            <argument
+                android:name="update_order_data"
+                android:defaultValue="@null"
+                app:argType="com.codewithhiren.foodorderapplatest.model.FetchOrderItemResponse"
+                app:nullable="true" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/makeOrderFragment"
+        android:name="com.codewithhiren.foodorderapplatest.ui.makeOrder.MakeOrderFragment"
+        android:label="Make Order"
+        tools:layout="@layout/fragment_make_order" >
+        <argument
+            android:name="food_list_item_data"
+            app:argType="com.codewithhiren.foodorderapplatest.model.FoodListItemResponse"
+            app:nullable="true" />
+        <argument
+            android:name="update_order_data"
+            app:argType="com.codewithhiren.foodorderapplatest.model.FetchOrderItemResponse"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_makeOrderFragment_to_orderedFoodListFragment"
+            app:destination="@id/orderedFoodListFragment" >
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/orderedFoodListFragment"
+        android:name="com.codewithhiren.foodorderapplatest.ui.orderedFoodList.OrderedFoodListFragment"
+        android:label="Your Orders"
+        tools:layout="@layout/fragment_ordered_food" >
+        <action
+            android:id="@+id/action_orderedFoodListFragment_to_makeOrderFragment"
+            app:destination="@id/makeOrderFragment" >
+            <argument
+                android:name="food_list_item_data"
+                android:defaultValue="@null"
+                app:argType="com.codewithhiren.foodorderapplatest.model.FoodListItemResponse"
+                app:nullable="true" />
+        </action>
+    </fragment>
+</navigation>

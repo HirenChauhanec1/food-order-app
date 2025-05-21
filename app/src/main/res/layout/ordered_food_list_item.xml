@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_10sdp"
+    android:id="@+id/cv_main"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_food_image"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_130sdp"
+            android:contentDescription="@string/ordered_food_image"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <TextView
+            android:id="@+id/tv_food_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/food_name"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintBottom_toTopOf="@+id/tv_order_number"
+            app:layout_constraintStart_toEndOf="@+id/iv_food_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_order_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_number"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_price"
+            app:layout_constraintStart_toStartOf="@+id/tv_food_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_food_name" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            app:layout_constraintBottom_toTopOf="@+id/tv_quantity"
+            app:layout_constraintStart_toStartOf="@+id/tv_food_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_order_number" />
+
+        <TextView
+            android:id="@+id/tv_rupee_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rupee_sign"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/_15ssp"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_price"
+            app:layout_constraintStart_toEndOf="@+id/tv_price" />
+
+        <TextView
+            android:id="@+id/tv_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quantity"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_food_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_price" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

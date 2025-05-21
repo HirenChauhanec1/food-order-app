@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FoodOrderAppLatest" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+<!--         <item name="colorPrimary">@color/app_color</item>-->
+
+
+    </style>
+
+    <style name="Theme.FoodOrderAppLatest" parent="Base.Theme.FoodOrderAppLatest" />
+
+    <style name="EditText">
+        <item name="layout_constraintWidth_percent">0.9</item>
+        <item name="android:padding">@dimen/_10sdp</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+    </style>
+</resources>
