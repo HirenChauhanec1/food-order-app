@@ -38,8 +38,8 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         Log.d("chauhan","Android developer")
-        setSupportActionBar(binding.toolbar)
 
         navController = (supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment).navController
         appBarConfiguration = AppBarConfiguration(setOf(R.id.foodListFragment))
