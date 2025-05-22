@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        Log.d("chauhan","hiren")
         Log.d("chauhan","chauhan")
         setSupportActionBar(binding.toolbar)
 
