@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        Log.d("chauhan","main")
+        Log.d("chauhan","main 2")
 
         setSupportActionBar(binding.toolbar)
 
