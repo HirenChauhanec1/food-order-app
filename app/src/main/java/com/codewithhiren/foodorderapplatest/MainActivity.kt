@@ -41,6 +41,8 @@ class MainActivity : AppCompatActivity() {
 
         Log.d("chauhan","Android developer")
 
+        setSupportActionBar(binding.toolbar)
+
         navController = (supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment).navController
         appBarConfiguration = AppBarConfiguration(setOf(R.id.foodListFragment))
         setupActionBarWithNavController(navController, appBarConfiguration)
