@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        Log.d("chauhan","hiren chauhan android developer code master")
+        Log.d("chauhan","2nd")
         setSupportActionBar(binding.toolbar)
 
         navController = (supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment).navController
